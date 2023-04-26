@@ -23,7 +23,10 @@ const App = () => {
     );
 }
 
-function PageTitle(props: any) {
+type PagePropsTitle = {
+    title: string
+}
+function PageTitle(props: PagePropsTitle) {
     return (
         <h1>{props.title}</h1>
     )
