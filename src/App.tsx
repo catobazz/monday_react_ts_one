@@ -1,25 +1,28 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./Components/Accordion/Accordion";
-import {Star} from "./Components/Star/Star";
-
+import Rating from "./Components/Rating/Rating";
 
 const App = () => {
     console.log("App rendering")
     return (
 
-        <> This is App component
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
+        <>
+            <AppTitle />
+            <Rating />
             <Accordion/>
+            <Rating />
         </>
 
     );
 }
 
-
+function AppTitle() {
+    return (
+        <>This is App component</>
+    )
+    
+}
 
 
 
