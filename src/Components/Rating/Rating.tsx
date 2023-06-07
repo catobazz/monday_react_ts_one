@@ -6,6 +6,9 @@ type RatingPropsType = {
     value: number
 }
 export function Rating(props: RatingPropsType) {
+
+
+
     if (props.value === 1) {
         return (
             <div>
