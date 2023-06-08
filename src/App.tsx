@@ -12,22 +12,22 @@ const App = () => {
         <div className='App'>
             <OnOff />
 
-            <PageTitle title={"This is App component"} />
-            <PageTitle title={"My Friends"} />
+            {/*<PageTitle title={"This is App component"} />*/}
+            {/*<PageTitle title={"My Friends"} />*/}
 
             {/*Article 1*/}
             {/*<UncontrolledRating value={3} />*/}
             {/*<UncontrolledRating value={1} />*/}
 
-            {/*<Accordion titleValue={"Меню"} />*/}
+            <Accordion titleValue={"Меню"} />
             {/*<Accordion titleValue={"Барная карта"} /> */}
 
             Article 2
-            {/*<Rating value={4} />*/}
-            <UncontrolledRating  />
+            <Rating value={4} />
+            {/*<UncontrolledRating  />*/}
 
-            <UncontrolledAccordion titleValue={"Меню"} />
-            <UncontrolledAccordion titleValue={"Барная карта"} />
+            {/*<UncontrolledAccordion titleValue={"Меню"} />*/}
+            {/*<UncontrolledAccordion titleValue={"Барная карта"} />*/}
 
         </div>
 
