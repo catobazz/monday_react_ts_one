@@ -6,14 +6,12 @@ type AccordionPropsType = {
 
 function UncontrolledAccordion(props: AccordionPropsType) {
     const [toggle, setToggle] = useState<boolean>(true)
-    console.log(toggle)
     const setToggleHandler = () => {
         setToggle(!toggle)
     }
     return (
         <div>
             <UncontrolledAccordionTitle title={props.titleValue} onClick={setToggleHandler}/>
-
             {toggle && <UncontrolledAccordionBody/>}
         </div>
     )

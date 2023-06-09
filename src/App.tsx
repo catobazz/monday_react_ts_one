@@ -1,16 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./Components/Accordion/Accordion";
-import {Rating} from "./Components/Rating/Rating";
+import {Rating, RatingValueType} from "./Components/Rating/Rating";
 import OnOff from "./Components/OnOff/OnOff";
 import UncontrolledAccordion from "./Components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./Components/UncontrolledRating/UncontrolledRating";
 
 const App = () => {
+
+    let [valueRating, setValueRating] = useState<RatingValueType>(0);
+    const [toggleAccordion, setToggleAccordion] = useState<boolean>(true);
+    const [on, setOn] = useState( false);
+
     return (
 
         <div className='App'>
-            <OnOff />
+            <OnOff
+                on={on}
+                setOn={setOn}
+            />
 
             {/*<PageTitle title={"This is App component"} />*/}
             {/*<PageTitle title={"My Friends"} />*/}
@@ -19,11 +27,19 @@ const App = () => {
             {/*<UncontrolledRating value={3} />*/}
             {/*<UncontrolledRating value={1} />*/}
 
-            <Accordion titleValue={"Меню"} />
+            <Accordion
+                titleValue={"Меню"}
+                toggleAccordion={toggleAccordion}
+                setToggleAccordion={()=>setToggleAccordion(!toggleAccordion)}
+
+            />
             {/*<Accordion titleValue={"Барная карта"} /> */}
 
             Article 2
-            <Rating value={4} />
+            <Rating
+                setValueRating={setValueRating}
+                value={valueRating}
+            />
             {/*<UncontrolledRating  />*/}
 
             {/*<UncontrolledAccordion titleValue={"Меню"} />*/}

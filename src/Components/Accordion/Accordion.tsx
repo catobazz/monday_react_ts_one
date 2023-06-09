@@ -2,23 +2,28 @@ import React from "react";
 
 type AccordionPropsType = {
     titleValue: string
+    toggleAccordion: boolean
+    setToggleAccordion: ()=>void
 }
 function Accordion(props: AccordionPropsType)    {
+
     return (
         <div>
-            <AccordionTitle title={props.titleValue} />
-            <AccordionBody />
+            <AccordionTitle title={props.titleValue} setToggleAccordion={props.setToggleAccordion} />
+            { props.toggleAccordion && <AccordionBody/>}
         </div>
     )
 }
 
 type AccordionTitlePropsType = {
     title: string
+    setToggleAccordion: ()=>void
+
 }
 function AccordionTitle(props: AccordionTitlePropsType)   {
     return (
         <div>
-            <h3>{props.title}</h3>
+            <h3 onClick={props.setToggleAccordion}>{props.title}</h3>
         </div>
     )
 }
