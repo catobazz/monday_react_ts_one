@@ -12,6 +12,11 @@ const App = () => {
     const [toggleAccordion, setToggleAccordion] = useState<boolean>(true);
     const [on, setOn] = useState( false);
 
+    let a = 'пиздуй'
+    let d = Math.floor(a.length /2)
+    let s = a.slice()
+    console.log(d)
+
     return (
 
         <div className='App'>
